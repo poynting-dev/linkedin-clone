@@ -51,6 +51,38 @@ const Main = (props) => {
           <img src="/images/1.jpg" alt="" />
         </a>
       </SharedImg>
+      <SocialCounts>
+        <li>
+          <button>
+            <img src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt="" />
+            <img src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f" alt="" />
+            <span>75</span>
+          </button>
+        </li>
+        <li>
+          <button>
+            <a>2 comments</a>
+          </button>
+        </li>
+      </SocialCounts>
+      <SocialActions>
+        <button>
+          <img src="\images\like-svgrepo-com.svg" alt="" />
+          <span>Like</span>
+        </button>
+        <button>
+          <img src="\images\comment-svgrepo-com.svg" alt="" /> 
+          <span>Comment</span>
+        </button>
+        <button>
+          <img src="\images\share-svgrepo-com.svg" alt="" />
+          <span>Share</span>
+        </button>
+        <button>
+          <img src="\images\send-svgrepo-com.svg" alt="" />
+          <span>Send</span>
+        </button>
+      </SocialActions>
     </Article>
   </div>
   </Container>;
@@ -182,8 +214,85 @@ const SharedActor = styled.div`
   }
 `;
 
-const Description = styled.div``;
+const Description = styled.div`
+  padding: 0 16px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  text-align: left;
+`;
 
-const SharedImg = styled.div``;
+const SharedImg = styled.div`
+  margin-top: 8px;
+  width: 100%;
+  display: block;
+  position: relative;
+  background-color: #f9fafb;
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const SocialCounts = styled.ul`
+  line-height: 1.3;
+  display: flex;
+  align-items: flex-start;
+  overflow: auto;
+  margin: 0 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9e5df;
+  list-style: none;
+  li {
+    margin-right: 5px;
+    font-size: 12px;
+    button {
+      display: flex;
+    }
+  }
+`;
+
+const SocialActions = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  size: 15px
+  min-height: 40px;
+  padding: 4px 8px;
+  button {
+    display: inline-flex;
+    align-items: center;
+    color: #0a66c2;
+    padding: 8px;
+    //margin: 0 5px;
+    &:nth-child(1){
+      img {
+        margin: 0 4px 0 -2px;
+        width: 25px;
+      }
+    }
+    &:nth-child(3){
+      img {
+        margin: 0 4px 0 -2px;
+        width: 25px;
+      }
+    }
+    &:nth-child(4){
+      img {
+        margin: 0 4px 0 -2px;
+        width: 25px;
+      }
+    }
+
+    @media(min-width: 768px) {
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+
+`;
 
 export default Main;
