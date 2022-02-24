@@ -66,7 +66,6 @@ const Main = (props) => {
     </ShareBox>
     <Content>
       {props.loading && <img src="\images\loading_LINKEDIN_ICON_400px.gif" alt=""/>}
-      {console.log(props.articles)};
       {props.articles.length > 0 && 
       props.articles.map((article, key) => 
       (<Article key={key}>
@@ -134,6 +133,7 @@ const Main = (props) => {
 
 const Container = styled.div`
   grid-area: main;
+  
 `;
 
 const CommonCard = styled.div`
