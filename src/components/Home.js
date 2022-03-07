@@ -80,7 +80,7 @@ const Layout = styled.div`
     flex-direction: column;
     padding: 0 5px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1080px) {
     margin: 0 200px 0 200px;
   }
 `;
